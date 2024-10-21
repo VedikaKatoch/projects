@@ -1,0 +1,87 @@
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navigation styling */
+header {
+    background-color: #007BFF;
+    padding: 15px 0;
+}
+
+nav ul.nav-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul.nav-list li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul.nav-list li a:hover {
+    text-decoration: underline;
+}
+
+/* Story section styling */
+.stories-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.story {
+    margin: 30px 0;
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.story h2 {
+    cursor: pointer;
+    color: #007BFF;
+}
+
+.story-content {
+    display: block;
+    transition: max-height 0.3s ease-out;
+}
+
+.read-more {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+/* Initially hide the "more content" section */
+.more-content {
+    display: none;
+}
+
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

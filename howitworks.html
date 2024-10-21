@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organ Donation - How It Works</title>
+    <link rel="stylesheet" href="howitworks.css">
+</head>
+<body>
+    <header>
+        <h1>Organ Donation System</h1>
+        <nav>
+            <ul>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#eligibility">Eligibility</a></li>
+                <li><a href="#steps">Donation Steps</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="how-it-works">
+        <h2>How Organ Donation Works</h2>
+        <p>Organ donation is a lifesaving process. Here’s how it works:</p>
+        <div class="interactive-section">
+            <button onclick="toggleInfo('step1')">1. Register as a Donor</button>
+            <p id="step1" class="info">You can register as an organ donor online or at your local hospital. This is the first step to becoming a donor.</p>
+            
+            <button onclick="toggleInfo('step2')">2. Medical Evaluation</button>
+            <p id="step2" class="info">Once registered, a thorough medical evaluation will be conducted to ensure eligibility for organ donation.</p>
+
+            <button onclick="toggleInfo('step3')">3. Organ Matching</button>
+            <p id="step3" class="info">When organs are available, the system matches the donor's organs to recipients on the waiting list based on medical factors.</p>
+
+            <button onclick="toggleInfo('step4')">4. Organ Recovery</button>
+            <p id="step4" class="info">A surgical team retrieves the organs in a safe and sterile environment.</p>
+
+            <button onclick="toggleInfo('step5')">5. Transplantation</button>
+            <p id="step5" class="info">The donated organs are transplanted into recipients, potentially saving multiple lives.</p>
+        </div>
+    </section>
+
+    <section id="eligibility">
+        <h2>Eligibility</h2>
+        <p>To be eligible to donate organs, certain medical conditions and criteria must be met. Learn more <a href="#contact">here</a>.</p>
+    </section>
+
+    <section id="steps">
+        <h2>Donation Steps</h2>
+        <ol>
+            <li>Register as a donor.</li>
+            <li>Medical evaluation.</li>
+            <li>Matching process.</li>
+            <li>Organ recovery.</li>
+            <li>Organ transplantation.</li>
+        </ol>
+    </section>
+
+    <footer id="contact">
+        <h3>Contact Us</h3>
+        <p>If you have questions or would like more information, please <a href="mailto:info@organdonation.com">email us</a>.</p>
+    </footer>
+
+    <script src="howitworks.js"></script>
+</body>
+</html>

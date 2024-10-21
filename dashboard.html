@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organ Donation Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Organ Donation Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Recipients</a></li>
+                <li><a href="#">Donors</a></li>
+                <li><a href="#">Statistics</a></li>
+                <li><a href="#">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="stats">
+            <div class="stat-box">
+                <h2>Total Recipients</h2>
+                <p id="total-recipients">Loading...</p>
+            </div>
+            <div class="stat-box">
+                <h2>Total Donors</h2>
+                <p id="total-donors">Loading...</p>
+            </div>
+            <div class="stat-box">
+                <h2>Successful Transplants</h2>
+                <p id="successful-transplants">Loading...</p>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <h2>Recipients List</h2>
+            <input type="text" id="search" placeholder="Search by name" onkeyup="searchTable()">
+            <table id="recipients-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Organ Needed</th>
+                        <th>Blood Type</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be inserted dynamically via JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Organ Donation System</p>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

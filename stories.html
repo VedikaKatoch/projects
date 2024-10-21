@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Donor Stories</title>
+    <link rel="stylesheet" href="stories.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#stories">Donor Stories</a></li>
+                <li><a href="#about">About Organ Donation</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section id="stories" class="stories-section">
+        <h1>Donor Stories</h1>
+
+        <div class="story" id="story1">
+            <h2 class="story-title" onclick="toggleStory(1)">John Doe - A Hero's Legacy</h2>
+            <div class="story-content">
+                <p>John's decision to donate his organs has saved five lives. His family continues to remember his kindness and generosity...</p>
+                <button class="read-more" onclick="expandStory(1)">Read More</button>
+                <div class="more-content" id="more-content-1">
+                    <p>John, a loving father and husband, had always been a giving person. After his passing, his organs went to those in desperate need. His heart was donated to a 12-year-old girl, while his kidneys were given to two people suffering from renal failure. John’s legacy continues to live on through the lives he saved.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="story" id="story2">
+            <h2 class="story-title" onclick="toggleStory(2)">Emily Smith - A Second Chance</h2>
+            <div class="story-content">
+                <p>After receiving a kidney from a donor, Emily now lives a healthy and happy life. This life-changing event inspired her to become an advocate for organ donation...</p>
+                <button class="read-more" onclick="expandStory(2)">Read More</button>
+                <div class="more-content" id="more-content-2">
+                    <p>Emily was diagnosed with kidney failure at age 35. After spending years on dialysis, she received a kidney transplant from a generous donor. This gift gave her a second chance at life, and now Emily educates others about the importance of organ donation.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Add more stories as needed -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Organ Donation System | All Rights Reserved</p>
+    </footer>
+
+    <script src="stories.js"></script>
+</body>
+</html>
