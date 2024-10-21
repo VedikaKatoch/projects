@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organ Donation Website</title>
+    
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #00796b;
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffeb3b;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-image: url('hero-image.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .cta-primary, .cta-secondary, .cta-tertiary {
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .cta-primary {
+            background-color: #ff5252;
+            color: white;
+        }
+
+        .cta-primary:hover {
+            background-color: #ff1744;
+            transform: scale(1.05);
+        }
+
+        .cta-secondary {
+            background-color: white;
+            color: #00796b;
+            border: 2px solid white;
+        }
+
+        .cta-secondary:hover {
+            background-color: #00796b;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .cta-tertiary {
+            background-color: #4caf50;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .cta-tertiary:hover {
+            background-color: #388e3c;
+            transform: scale(1.05);
+        }
+
+        /* Donor Form Section */
+        #donor-form {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .donor-content {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .donor-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #00796b;
+        }
+
+        .donor-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 15px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #005b5c;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #00796b;
+            padding: 40px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .footer-content p {
+            font-size: 1rem;
+            margin-top: 15px;
+        }
+
+        .social-links {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-links li {
+            margin: 0 10px;
+        }
+
+        .social-links li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links li a:hover {
+            color: #ffeb3b;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            .cta-primary, .cta-secondary {
+                font-size: 1rem;
+            }
+
+            .donor-content {
+                padding: 20px;
+            }
+
+            #donor-form h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#statistics">Statistics</a></li>
+            <li><a href="#stories">Donor Stories</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="hero">
+    <div class="hero-content">
+        <h1>Become an Organ Donor</h1>
+        <p>Your gift of life can change the world.</p>
+        <a href="#donor-form" class="cta-primary">Become a Donor</a>
+        <a href="#how-it-works" class="cta-secondary">Learn More</a>
+        <a href="recipient.html" class="cta-tertiary">Recipient Registration</a> <!-- New Recipient Button -->
+    </div>
+</section>
+
+<!-- Become a Donor Form Section -->
+<section id="donor-form">
+    <div class="donor-content">
+        <h2>Sign Up to Become an Organ Donor</h2>
+        <p>Fill in the form below to register as a donor and help save lives.</p>
+        <form id="donorSignupForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+            
+            <button type="submit" class="cta-primary">Submit</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p>© 2024 Organ Donation Website</p>
+        <ul class="social-links">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
