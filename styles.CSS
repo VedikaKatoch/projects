@@ -256,7 +256,52 @@
             #donor-form h2 {
                 font-size: 2rem;
             }
-        }
+
+            /* Additional styling for Sign Up and Login buttons */
+.auth-buttons {
+    margin-top: 20px;
+}
+
+.auth-buttons .cta-primary,
+.auth-buttons .cta-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.auth-buttons .cta-primary {
+    background-color: #4CAF50; /* Green color */
+}
+
+.auth-buttons .cta-primary:hover {
+    background-color: #45a049;
+}
+
+.auth-buttons .cta-secondary {
+    background-color: #f44336; /* Red color */
+}
+
+.auth-buttons .cta-secondary:hover {
+    background-color: #e53935;
+}
+
+/* Style for language selector dropdown */
+#languageSelector {
+    padding: 5px;
+    margin-left: 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+}
+
+
+  }
     </style>
 </head>
 <body>
