@@ -3,70 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - Organ Donation System</title>
-    <link rel="stylesheet" href="admin.css">
+    <title>Hospital Admin Registration</title>
+    <link rel="stylesheet" href="admin.css"> <!-- Link to CSS file -->
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Admin Panel</h2>
-        <ul>
-            <li><a href="#user-management">User Management</a></li>
-            <li><a href="#match-management">Match Management</a></li>
-            <li><a href="#reporting">Reporting Tools</a></li>
-        </ul>
-    </div>
-    
-    <div class="main-content">
-        <!-- User Management Section -->
-        <section id="user-management">
-            <h2>User Management</h2>
-            <table id="userTable">
-                <thead>
-                    <tr>
-                        <th>User ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- User rows will be added dynamically -->
-                </tbody>
-            </table>
-            <button onclick="addUser()">Add User</button>
-        </section>
 
-        <!-- Match Management Section -->
-        <section id="match-management">
-            <h2>Match Management</h2>
-            <table id="matchTable">
-                <thead>
-                    <tr>
-                        <th>Match ID</th>
-                        <th>Donor</th>
-                        <th>Recipient</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Match rows will be added dynamically -->
-                </tbody>
-            </table>
-            <button onclick="addMatch()">Add Match</button>
-        </section>
+    <div class="container">
+        <h2>Hospital Admin Registration</h2>
+        <form id="hospitalForm" onsubmit="return validateHospitalForm()">
+            <label for="hospitalName">Hospital Name:</label>
+            <input type="text" id="hospitalName" name="hospitalName" required>
 
-        <!-- Reporting Section -->
-        <section id="reporting">
-            <h2>Reporting Tools</h2>
-            <button onclick="generateReport()">Generate Report</button>
-            <div id="reportOutput">
-                <!-- Report will be shown here -->
-            </div>
-        </section>
+            <label for="registrationID">Hospital Registration ID:</label>
+            <input type="text" id="registrationID" name="registrationID" required>
+
+            <label for="adminEmail">Admin Email:</label>
+            <input type="email" id="adminEmail" name="adminEmail" required>
+
+            <label for="adminPassword">Admin Password:</label>
+            <input type="password" id="adminPassword" name="adminPassword" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" name="contactNumber" required>
+
+            <label for="address">Hospital Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <button type="submit">Register Hospital</button>
+        </form>
+        <p id="successMessage" class="hidden">Hospital registered successfully!</p>
     </div>
 
-    <script src="admin.js"></script>
+    <script src="admin.js"></script> <!-- Link to JavaScript file for validation -->
 </body>
 </html>
