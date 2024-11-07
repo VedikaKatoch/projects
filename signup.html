@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organ Donation - Signup</title>
+    <link rel="stylesheet" href="signup.css"> <!-- Link to CSS file for styling -->
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up for Organ Donation</h2>
+        <form id="signupForm" onsubmit="return validateForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <p id="successMessage" class="hidden">Thank you for signing up!</p>
+    </div>
+    <script src="signup.js"></script> <!-- Link to JavaScript file for validation -->
+</body>
+</html>
