@@ -15,11 +15,20 @@
             <li><a href="howitworks.html">How It Works</a></li>
             <li><a href="dashboard.html">Statistics</a></li>
             <li><a href="stories.html">Donor Stories</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="FAQ.html">FAQ</a></li> 
             <li><a href="contact.html">Contact Us</a></li> <!-- Link to Contact Us page -->
             
             
         </ul>
+
+         <!-- Language Selector Dropdown -->
+         <select id="languageSelector" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="te">Telgu</option>
+            <option value="ta">Tamil</option>
+            <option value="Pa">punjabi</option>
+        </select>
     </nav>
 </header>
 
@@ -29,45 +38,41 @@
         <h1>Become an Organ Donor</h1>
         <p>Your gift of life can change the world.</p>
         <a href="learn-more.html" class="cta-secondary">Learn More</a> <!-- Link to Learn More page -->
-        <a href="recipient.html" class="cta-tertiary">Recipient Registration</a> <!-- Link to Recipient Registration page -->
-    </div>
-</section>
+        <a href="donorpage.html" class="cta-primary">Register as Donor</a> <!-- New button for Donor Registration -->
+        <a href="recipient.html" class="cta-tertiary">Register as Recipient</a> <!-- New button for Recipient Registration -->
+        
+        <div class="auth-buttons">
 
-<!-- Become a Donor Form Section -->
-<section id="donor-form">
-    <div class="donor-content">
-        <h2>Sign Up to Become an Organ Donor</h2>
-        <p>Fill in the form below to register as a donor and help save lives.</p>
-        <form id="donorSignupForm">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <label for="location">Location:</label>
-            <input type="text" id="location" name="location" required>
-            
-            <button type="submit" class="cta-primary">Submit</button>
-        </form>
-    </div>
-</section>
+            <a href="signup.html" class="cta-primary">Sign Up</a> <!-- Sign Up button -->
+            <a href="loginpage.html" class="cta-secondary">Login</a> <!-- Login button -->
+            <a href="Admin.html" class="cta-admin">Admin Registration</a> <!-- Admin Registration button -->
+        </div>
+        
 
-<!-- Footer -->
-<footer>
-    <div class="footer-content">
-        <p>© 2024 Organ Donation Website</p>
-        <ul class="social-links">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-        </ul>
-    </div>
-</footer>
+        </div>
+    </section>
+    <script src="language.js"></script> <!-- Link to JavaScript for language switching -->
 
-<script src="script.js"></script> <!-- Link to your JavaScript file -->
 </body>
-</html>
+</html>   
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
